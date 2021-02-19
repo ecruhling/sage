@@ -1,0 +1,75 @@
+body {
+  -webkit-tap-highlight-color: $primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  min-width: 320px;
+  scroll-padding-top: 0; // usually the height of the navbar
+}
+
+#skip-to-content {
+  padding: 8px 10px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  color: white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  background: #bf1722;
+  transition: top 1s ease-out;
+  z-index: 9999;
+  font-weight: bold;
+
+  &:focus {
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline-color: transparent;
+    transition: top 0.1s ease-in;
+  }
+}
+
+// Remove tap highlight on iOS
+input,
+textarea,
+button,
+select,
+label,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  @include transition();
+}
+
+// Utility classes
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.flex-1-1-100 {
+  flex: 1 1 100%;
+}
+
+// Highlight Color Customization
+::selection {
+  color: white;
+  text-shadow: none;
+  background: $primary;
+}
+
+// Style focus outlines
+a:focus,
+button:focus,
+*:focus {
+  outline: 1px dotted $primary !important;
+  outline-offset: 4px;
+}
+
+// turn off focus outlines if the .accessibility class is not present on <body>
+body:not(.accessibility) a:focus,
+body:not(.accessibility) button:focus,
+body:not(.accessibility) *:focus {
+  outline: none !important;
+}
