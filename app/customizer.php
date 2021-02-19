@@ -30,7 +30,7 @@ function resource_customize($wp_customize)
             $wp_customize,
             'primary_logo_control',
             array(
-                'label' => __('Main Site Logo', 'sage'),
+                'label' => __('Main Site Logo', 'rage'),
                 'section' => 'title_tagline',
                 'settings' => 'primary_logo_setting',
             )
@@ -42,8 +42,8 @@ function resource_customize($wp_customize)
      */
     $wp_customize->add_section('site_wide_info', [
         'capability' => 'edit_theme_options',
-        'title' => __('Site-wide Information', 'sage'),
-        'description' => sprintf(__('Site-wide Information', 'sage')),
+        'title' => __('Site-wide Information', 'rage'),
+        'description' => sprintf(__('Site-wide Information', 'rage')),
         'priority' => 90,
     ]);
 
@@ -56,7 +56,7 @@ function resource_customize($wp_customize)
     ]);
 
     $wp_customize->add_control('address_control', [
-        'label' => __('Address', 'sage'),
+        'label' => __('Address', 'rage'),
         'section' => 'site_wide_info',
         'settings' => 'address_setting',
         'type' => 'textarea',
@@ -71,7 +71,7 @@ function resource_customize($wp_customize)
     ]);
 
     $wp_customize->add_control('google_maps_api_control', [
-        'label' => __('Google Maps API Key', 'sage'),
+        'label' => __('Google Maps API Key', 'rage'),
         'section' => 'site_wide_info',
         'settings' => 'google_maps_api_setting',
         'type' => 'text',
@@ -86,7 +86,7 @@ function resource_customize($wp_customize)
     ]);
 
     $wp_customize->add_control('google_maps_control', [
-        'label' => __('Google Maps Address Link', 'sage'),
+        'label' => __('Google Maps Address Link', 'rage'),
         'section' => 'site_wide_info',
         'settings' => 'google_maps_setting',
         'type' => 'url',
@@ -101,7 +101,7 @@ function resource_customize($wp_customize)
     ]);
 
     $wp_customize->add_control('google_maps_latitude_control', [
-        'label' => __('Google Maps Latitude', 'sage'),
+        'label' => __('Google Maps Latitude', 'rage'),
         'section' => 'site_wide_info',
         'settings' => 'google_maps_latitude',
         'type' => 'number',
@@ -116,7 +116,7 @@ function resource_customize($wp_customize)
     ]);
 
     $wp_customize->add_control('google_maps_longitude_control', [
-        'label' => __('Google Maps Longitude', 'sage'),
+        'label' => __('Google Maps Longitude', 'rage'),
         'section' => 'site_wide_info',
         'settings' => 'google_maps_longitude',
         'type' => 'number',

@@ -1,3 +1,7 @@
+### 1.0.0-(R)esource S(age)
+* fork of Sage 9.0.10, with some Sage 10 additions
+* additional initial customizations
+
 ### 9.0.10: November 9th, 2020
 * Update Node dependencies ([#2572](https://github.com/roots/sage/pull/2572))
 * Composer 2 compatibility ([#2569](https://github.com/roots/sage/pull/2569))
