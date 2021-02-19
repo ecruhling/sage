@@ -2,6 +2,10 @@
 
 Based on Sage; a WordPress starter theme with a modern development workflow. This fork combines parts of v10 and v9.0.10. Webpack 5 & Laravel Mix 6.
 
+* fork of Sage 9.0.10, with some Sage 10 additions
+* additional customizations
+* asset builder / versioning using mix-manifest
+
 ## Features
 
 * Sass for stylesheets

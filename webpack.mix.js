@@ -2,6 +2,7 @@ const mix = require('laravel-mix');
 require('@tinypixelco/laravel-mix-wp-blocks');
 // require('laravel-mix-purgecss');
 require('laravel-mix-copy-watched');
+// const path = require('path');
 
 /*
  |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ mix
 
 mix
   .sass('resources/assets/styles/main.scss', 'styles')
-  .sass('resources/assets/styles/editor.scss', 'styles');
+  // .sass('resources/assets/styles/editor.scss', 'styles');
 // .purgeCss({
 //   extend: { content: [path.join(__dirname, 'index.php')] },
 //   whitelist: require('purgecss-with-wordpress').whitelist,
@@ -29,9 +30,9 @@ mix
 
 mix
   .js('resources/assets/scripts/main.js', 'scripts')
-  .js('resources/assets/scripts/customizer.js', 'scripts')
-  .blocks('resources/assets/scripts/editor.js', 'scripts')
-  .extract();
+  // .js('resources/assets/scripts/customizer.js', 'scripts')
+  // .blocks('resources/assets/scripts/editor.js', 'scripts')
+  // .extract(); // extracts vendor JS into a separate file
 
 mix
   .copyWatched('resources/assets/images/**', 'dist/images')
