@@ -16,6 +16,7 @@
 })();
 
 // import external dependencies
+import 'jquery';
 
 /**
  Instead of loading everything, we're going to
