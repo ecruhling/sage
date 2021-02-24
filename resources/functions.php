@@ -62,7 +62,7 @@ array_map(function ($file) use ($sage_error) {
     if (!locate_template($file, true)) {
         $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'rage'), $file), 'File not found');
     }
-}, ['helpers', 'setup', 'filters', 'admin', 'customizer']);
+}, ['helpers', 'setup', 'filters', 'admin', 'customizer', 'shortcodes']);
 
 /**
  * Here's what's happening with these hooks:
