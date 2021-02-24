@@ -1,7 +1,7 @@
 <a class="sr-only sr-only-focusable" href="#content" id="skip-to-content">Skip To Main Content</a>
 
 <nav class="navbar navbar-expand-lg" id="navbar">
-  <a class="navbar-brand p-0 d-block position-absolute" href="{{ home_url('/') }}">
+  <a class="navbar-brand p-0 m-0 d-block position-absolute" href="{{ home_url('/') }}">
     <span class="sr-only">{{ get_bloginfo("name", "display") }}</span>
   </a>
   <button class="navbar-toggler p-0 m-0 border-0 collapsed position-absolute" type="button" data-toggle="collapse"

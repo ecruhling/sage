@@ -14,16 +14,18 @@ function smoothScroll() {
         location.hostname === this.hostname
       ) {
         // Figure out the element to scroll to
-        let target = $(this.hash);
+        const hash = this.hash;
+        let target = $(hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) { // make sure target exists
           // Only prevent the default behavior if the animation is actually going to play
           e.preventDefault();
           $('html, body').animate({
             scrollTop: $(target).offset().top - parseInt($('body').css('scroll-padding-top')), // use scroll-padding-top as offset for scroll
-          }, 600, function() {
+          }, 450, function() {
             // Callback after animation: change focus to target element
             const $target = $(target);
+            window.history.pushState(null, null, hash); // update URL address
             $target.focus();
             if ($target.is(':focus')) { // Checks to see if target was focused already
               return false;
