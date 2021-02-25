@@ -6,7 +6,21 @@ export default {
   init() {
 
     // variables
+    const $modalDialog = $('#content-modal');
+    const $loading = $('#loading');
     const $navbar = $('#navbar');
+
+    // add accessibility class on TAB;
+    // remove loading and reset modal on Escape
+    $(document).on('keyup', function (e) {
+      if (e.keyCode === 9) {// tab
+        $('body').addClass('accessibility');
+      }
+      if (e.keyCode === 27) {// escape
+        $loading.removeClass('show');
+        $modalDialog.modal('hide');
+      }
+    });
 
     // Load clicked content in modal
     loadInModal();
