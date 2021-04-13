@@ -12,9 +12,9 @@
   pointer-events: none;
   background: rgba(black, 0.5);
   opacity: 0;
+  z-index: 1040;
 
   &.show {
-    z-index: 1040;
     opacity: 1;
   }
 }
