@@ -3,8 +3,9 @@
 function smoothScroll()
 {
 // Select all links with hashes
-    $('a[href*="#"]').not('.btn')
+    $('a[href*="#"]')
     // Remove links that don't actually link to anything
+    .not('.btn')
     .not('[href="#"]')
     .not('[href="#0"]')
     .on('click', function (e) {
