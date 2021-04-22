@@ -1,8 +1,13 @@
 const mix = require('laravel-mix');
 require('@tinypixelco/laravel-mix-wp-blocks');
 require('laravel-mix-copy-watched');
+const Notifications = require('pretty-mix-notifications');
 // require('laravel-mix-purgecss');
 // const path = require('path');
+
+// Pretty Mix Notifications
+// https://github.com/ntavelis/pretty-mix-notifications
+mix.extend('prettyNotifications', new Notifications);
 
 /*
  |--------------------------------------------------------------------------
@@ -42,4 +47,9 @@ mix
   .autoload({ jquery: ['$', 'window.jQuery'] })
   .options({ processCssUrls: false })
   .sourceMaps(false, 'source-map')
-  .version();
+  .version()
+  .prettyNotifications({
+    title: 'Testing Site',
+    successSound: false,
+  });
+
