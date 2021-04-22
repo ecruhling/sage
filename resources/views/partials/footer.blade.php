@@ -2,6 +2,17 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
+        @if (!empty($site_information->address))
+          <address class="mb-0">
+            @if (!empty($site_information->address_link))
+              <a href="{{ $site_information->address_link }}" target="_blank" rel="noopener">
+                @endif
+                {!! nl2br($site_information->address) !!}
+                @if (!empty($site_information->address_link))
+              </a>
+            @endif
+          </address>
+        @endif
         @if (!empty($site_information->phone))
           <a href="tel:{!! $site_information->phone !!}">{!! $site_information->phone !!}</a><br>
         @endif
