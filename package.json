@@ -74,6 +74,7 @@
   "resolutions": {
     "debug": "^4.3.1",
     "source-map-resolve": "^0.6.0",
-    "chokidar": "^3.5.1"
+    "chokidar": "^3.5.1",
+    "css-loader": "^5.2.4"
   }
 }
